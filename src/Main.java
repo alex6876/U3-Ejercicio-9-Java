@@ -1,11 +1,25 @@
+
 public class Main {
     public static void main(String[] args) {
-        ControlVelocidad v1 = new ControlVelocidad(158);
+        ControlVelocidad control = new ControlVelocidad(120);
 
-        v1.acelerar(15);
-        v1.frenar(80);
-        v1.frenar(15);
-        v1.acelerar(120);
-        System.out.println(v1.getVelocidadActual());
+        System.out.println("Velocidad inicial: "
+                + control.getVelocidadActual() + " km/h");
+
+        control.acelerar(100);
+        System.out.println("Velocidad actual: "
+                + control.getVelocidadActual() + " km/h");
+
+        control.acelerar(30);
+        System.out.println("Velocidad actual: "
+                + control.getVelocidadActual() + " km/h");
+
+        control.frenar(40);
+        System.out.println("Velocidad actual: "
+                + control.getVelocidadActual() + " km/h");
+
+        control.frenar(200);
+        System.out.println("Velocidad final: "
+                + control.getVelocidadActual() + " km/h");
     }
 }
